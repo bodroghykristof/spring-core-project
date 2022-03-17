@@ -11,9 +11,21 @@ import java.util.List;
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
 
-    public UserService(@Autowired UserRepository userRepository) {
+    public UserService() {
+    }
+
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    /**
+     * Ee only need @Autowired annotation here if the no args constructor is present.
+     * In case of a single constructor Spring finds and uses it by default.
+     */
+    @Autowired
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
