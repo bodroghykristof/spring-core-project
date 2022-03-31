@@ -29,10 +29,14 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
     @PostConstruct
     public void init() {
-        List<User> users = userRepository.findAll();
-        users.forEach(System.out::println);
+        List<User> users = findAll();
+        // users.forEach(System.out::println);
     }
 
 }
