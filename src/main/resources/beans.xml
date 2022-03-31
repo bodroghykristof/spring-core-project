@@ -11,6 +11,8 @@
     <context:annotation-config />
 
     <!-- repository layer -->
+    <!-- actually these lines create BeanDefinition objects within the IOC container encapsulating -->
+    <!-- information about the bean's type, creation/destruction methods, scope, dependencies etc. -->
     <bean id="userRepository" class="hu.vemsoft.core.repository.UserRepository" />
 
     <!-- service layer -->
