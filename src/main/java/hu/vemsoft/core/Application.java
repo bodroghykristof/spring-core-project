@@ -13,10 +13,12 @@ public class Application {
 
     public static void main(String[] args) {
 
-        // Uses annotations present in Java classes
+        /* Uses annotations present in Java classes */
         ApplicationContext annotationBasedConfig = new AnnotationConfigApplicationContext(SpringConfig.class);
 
         // Uses beans.xml resource file on classpath
+        // It is also possible to use multiple resources passed as constructor arguments
+        // OR alternatively you can do imports within the XML-files and use only one of them in the Java-code
         // ApplicationContext xmlBasedConfig = new ClassPathXmlApplicationContext("beans.xml");
 
     }
