@@ -20,6 +20,6 @@ public class PostConstructTesterComponent {
         // otherwise we would get a NullPointerException
         ApplicationContext context = SpringApplicationContext.CONTEXT;
         UserService userServiceBean = (UserService) SpringApplicationContext.getBean("userService");
-        System.out.println(userServiceBean.findAll().size());
+        // System.out.println(userServiceBean.findAll().size());
     }
 }
